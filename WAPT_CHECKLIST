@@ -1,0 +1,112 @@
+Web App Penetration Testing Checklist	
+#	Activity
+	Information Gathering
+1	Spier/crawl
+2	Check to metafiles
+3	Review webpage comments
+4	Identify web application framework and technologies used
+5	Fingerprint web server
+6	Identify application entry points
+7	Identify Web services 
+	
+#	Configuration Management
+8	Check for commonly used administrative URLs
+9	Check for old backups and unreferenced files
+10	Check for HTTP methods
+11	Check for Cross Site Tracing (XST)
+12	Test file extensions handling
+13	Test RIA cross domain policy
+14	Check for security HTTP headers e.g. X-frame-Options 
+15	Test for sensitive data in client side code e.g API keys, credentials
+	
+#	Secure Transmission
+16	Check SSL Version, algorithms and key length
+17	Check credentials are sent over HTTPS
+18	Login form is delivered over HTTPS
+19	Session Tokens are delivered over HTTPS
+20	Check if HSTS is in use
+21	Testing web messaging
+	
+#	Authentication
+22	Testing for weak passwords
+23	Testing Remember Me functionality
+24	Test password reset & recovery
+25	Testing CAPTCHA
+26	Testing Multi factor authentication
+27	Test for logout functionality presence
+28	Test for default logins and passwords
+29	Test for consistent authentication across applications with shared authentication schema/SSO and alternative channels
+30	Testing for weak security question
+31	Testing user enumeration
+32	Testing authentication bypass
+33	Testing for brute force protection
+	
+#	Session Management
+34	Check session IDs for cookie flags (httpOnly and secure)
+35	Check session cookie scope (path and domain)
+36	Check session cookie duration (expires and max-age)
+37	Check session termination after a maximum lifetime
+38	Check session termination after relative timeout
+39	Check session termination after logout
+40	Test to see if users can have multiple simultaneous sessions
+41	Test session cookies for randomness
+42	Confirm that new session tokens are issued on login, role change, and logout
+43	Test for consistent session management across applications with shared session management
+44	Test for CSRF and clickjacking
+	
+#	Authorization
+45	Test for path traversal
+46	Test for vertical access control problems (a.k.a. privilege escalation)
+47	Test for horizontal access control problems (between two users at the same privilege level)
+48	Test for missing authorization
+49	Test for insecure direct object references
+	
+#	Cryptography
+50	Check for weak algorithms usage
+51	Check for proper use of salting
+52	Check for randomness functions
+	
+#	Data Validation
+53	Test for HTML Injection
+54	Test for SQL Injection
+55	Test for LDAP Injection
+56	Test for ORM Injection
+57	Test for XML Injection
+58	Test for XXE Injection
+59	Test for SSI Injection
+60	Test for XPath Injection
+61	Test for IMAP/SMTP Injection
+62	Test for Code Injection
+63	Test for Command Injection
+64	Test for NoSQL injection
+65	Test for Reflected Cross Site Scripting
+66	Test for Stored Cross Site Scripting
+67	Test for DOM based Cross Site Scripting
+68	Test for Format String
+69	Test for HTTP Splitting/Smuggling
+70	Test for HTTP Verb Tampering
+71	Test for Open Redirection
+72	Test for Local File Inclusion
+73	Test for Remote File Inclusion
+	
+#	Denial of Service
+74	Testing for HTTP DOS attack
+75	Testing for account lockout
+	
+#	File Upload
+76	Test that acceptable file types are whitelisted and non-whitelisted types are rejected
+77	Test that file size limits, upload frequency and total file counts are defined and are enforced
+78	Test that file contents match the defined file type
+79	Test that all file uploads have anti-virus scanning in place
+80	Test upload of malicious files
+81	Test that unsafe filenames are sanitized
+82	Test that uploaded files are not directly accessible within the web root
+83	Test that uploaded files are not served on the same hostname/port
+	
+#	Error Handling
+84	Check for sensitive data via error message
+85	Check for stack traces
+	
+#	
+86	Test for CSRF
+87	Test for web server related vulnerabilities
